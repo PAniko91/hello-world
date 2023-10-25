@@ -34,10 +34,10 @@ while repeat :
 
 #Setting up the variables that will be used for setting up the board:
 no_bomb=0
-bomb=1
+bomb="X"
 field='#'
 
-#
+#It initializes an empty board with 2 dimensions based on the received input from the user. This is an initial board with empty cells.
 board=[]
 for i in range(boardsize):
     innerlist=[]
@@ -45,28 +45,28 @@ for i in range(boardsize):
         innerlist.append(0)
     board.append(innerlist)
 
-# using the code of matrix.py, print the board
 
-
-# fill board with random mines using the most powerful tool of informatic: copy-paste
-#Adding randomly N mines into the board
+# Adding randomly N mines into the board
 
 for z in range(number_mines):
     i=random.randint(0,len(board)-1)
     j=random.randint(0,len(board)-1)
-    board[i][j] = 1
+    board[i][j] = bomb
 
 
-# make an advanced printing where you print the board but also the coordinates
+# Printing the board but also the coordinates
 # Creating two spaces in the first line
 print("  ",end="")
 # Creating the numbers in the first line
 for i in range(0,len(board)):
     print(i+1,"",end="")
 print("")
-# Creating the letters and cells without bombs
+# Creating the letters in the first column.
 for i in range(0,len(board)):
     letter = chr(ord('A') + i)
+#Printing the letter variables folowwed by the contents of the i-ths row of the board
     print(letter,*board[i])
+
+
 
 
