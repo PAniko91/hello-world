@@ -16,7 +16,7 @@ while repeat :
     except:
         print("Please define an integer!")
 
-# Second question is about the mine size. Similar to the above code we create a similar condition:
+# Second question is about the number of mines. Similarly to the above code we create conditions:
 repeat = True
 while repeat :
     try:
@@ -64,7 +64,7 @@ print("")
 # Creating the letters in the first column.
 for i in range(0,len(board)):
     letter = chr(ord('A') + i)
-#Printing the letter variables folowwed by the contents of the i-ths row of the board
+#Printing the letter variables followed by the contents of the i-ths row of the board
     print(letter,*board[i])
 
 
