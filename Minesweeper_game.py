@@ -95,10 +95,7 @@ for i in range(boardsize):
         rows.append('#')
     user_board.append(rows)
 
-#Doing the mapping on codes (letters and numbers)
-#conversion mapping
-#extract the first letter from the user input and convert it to a number
-
+#User interaction with the minesweeper game:
 l=0
 while l<boardsize**2-number_mines:
     l+=1
@@ -153,4 +150,3 @@ for x in range(len(board)):
     letter = chr(ord('A') + x)
     print(letter, end=" ")
     print(*board[x])
-
