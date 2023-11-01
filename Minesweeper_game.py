@@ -150,3 +150,4 @@ for x in range(len(board)):
     letter = chr(ord('A') + x)
     print(letter, end=" ")
     print(*board[x])
+
